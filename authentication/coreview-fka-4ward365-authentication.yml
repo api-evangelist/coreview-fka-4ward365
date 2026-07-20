@@ -1,0 +1,50 @@
+generated: '2026-07-18'
+method: searched
+source: https://help.coreview.com/api-authentication
+docs: https://help.coreview.com/api-authentication
+summary:
+  types:
+  - oauth2
+  - openIdConnect
+  oauth2_flows:
+  - clientCredentials
+  api_key_in: []
+  token_type: Bearer JWT
+  token_ttl_seconds: 3600
+schemes:
+- name: OAuth2ClientCredentials
+  type: oauth2
+  flow: clientCredentials
+  token_url: https://identity.coreview.com/connect/token
+  gov_token_url: https://usidentity.coreview.com/connect/token
+  client_auth: Basic (base64 client_id:client_secret) with grant_type=client_credentials
+  credentials: Client ID and Client Secret issued by CoreView Support
+  sources:
+  - https://help.coreview.com/api-authentication
+- name: OpenIDConnect
+  type: openIdConnect
+  openIdConnectUrl: https://identity.coreview.com/.well-known/openid-configuration
+  issuer: https://identity.coreview.com
+  grant_types_supported:
+  - client_credentials
+  - authorization_code
+  - refresh_token
+  - implicit
+  - urn:ietf:params:oauth:grant-type:device_code
+  - urn:openid:params:grant-type:ciba
+  endpoints:
+    authorization: https://identity.coreview.com/connect/authorize
+    token: https://identity.coreview.com/connect/token
+    userinfo: https://identity.coreview.com/connect/userinfo
+    introspection: https://identity.coreview.com/connect/introspect
+    revocation: https://identity.coreview.com/connect/revocation
+    jwks: https://identity.coreview.com/.well-known/openid-configuration/jwks
+  sources:
+  - https://identity.coreview.com/.well-known/openid-configuration
+notes: >-
+  CoreView Public APIs are secured with OAuth 2.0 / OpenID Connect using the
+  client-credentials grant against the CoreView IdentityServer. Requests to the
+  regional API proxy carry an Authorization: Bearer <JWT> header and an
+  X-scompany-ID header identifying the CoreView company/tenant. Tokens expire
+  after 3600 seconds and must be refreshed. GOV (FedRAMP) tenants use the
+  usidentity.coreview.com identity host.
