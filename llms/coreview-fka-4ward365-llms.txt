@@ -1,0 +1,33 @@
+# CoreView (FKA 4ward365)
+
+> CoreView (formerly 4ward365) is an enterprise Microsoft 365 governance, security, and automation platform. It secures the configuration, identity, and access layers of Microsoft 365 tenants and provides delegated administration, license management, reporting, and workflow automation. The CoreView Public API is secured with OAuth 2.0 / OpenID Connect (client-credentials) via regional API proxies, with a companion CoreFlow Workflow API.
+
+## APIs
+
+- [CoreView Public API — Authentication](https://help.coreview.com/api-authentication): OAuth 2.0 / OIDC client-credentials, regional API proxy hosts, documented scopes.
+- [Run a Workflow via API (CoreFlow)](https://help.coreview.com/schedule-and-run-workflows/run-a-workflow-via-api): Trigger and monitor workflow automation runs.
+
+## Identity
+
+- [OpenID Configuration](https://identity.coreview.com/.well-known/openid-configuration): OIDC discovery (issuer, jwks, token/authorization/userinfo/introspection endpoints).
+- Token endpoint: https://identity.coreview.com/connect/token (GOV: https://usidentity.coreview.com/connect/token)
+- Scopes: customer.read/write, delegation.read/write, operator.read/write, platform.read, licensepool.read/write, license.read
+
+## Artifacts
+
+- [Authentication](authentication/coreview-fka-4ward365-authentication.yml): OAuth2 client-credentials + OIDC profile.
+- [OAuth Scopes](scopes/coreview-fka-4ward365-scopes.yml): documented scope reference.
+- [Conventions](conventions/coreview-fka-4ward365-conventions.yml): auth headers, regional routing, honest gaps.
+- [Conformance](conformance/coreview-fka-4ward365-conformance.yml): OAuth2/OIDC + compliance standards.
+- [Lifecycle](lifecycle/coreview-fka-4ward365-lifecycle.yml): status page, SLA, versioning.
+- [MCP (candidate)](mcp/coreview-fka-4ward365-mcp.yml): candidate CoreFlow tool list.
+
+## Docs
+
+- [Developer / API How-Tos](https://help.coreview.com/en_US/how-tos-APIs)
+- [CoreSecurity — Compliance](https://www.coreview.com/coresecurity): SOC 2, ISO 27001, ISO 27018, CIS, FedRAMP, IRAP, GDPR.
+- [Status](https://status.coreview.com): incident.io status page (per-region components).
+- [Pricing](https://www.coreview.com/pricing)
+- [Blog](https://www.coreview.com/blog)
+- [Terms of Service](https://www.coreview.com/terms-of-service)
+- [Privacy Policy](https://www.coreview.com/privacy-policy)

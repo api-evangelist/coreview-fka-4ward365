@@ -1,0 +1,55 @@
+generated: '2026-07-18'
+method: searched
+source: https://help.coreview.com/api-authentication
+docs:
+- https://help.coreview.com/api-authentication
+- https://help.coreview.com/schedule-and-run-workflows/run-a-workflow-via-api
+authentication:
+  style: oauth2-client-credentials
+  header: 'Authorization: Bearer <JWT>'
+  tenant_header: 'X-scompany-ID: <CoreView company ID>'
+  token_endpoint: https://identity.coreview.com/connect/token
+  see: authentication/coreview-fka-4ward365-authentication.yml
+regional_routing:
+  description: >-
+    The API host is selected by the customer's CoreView datacenter; there is no
+    single global host. Callers must use the proxy host for their region.
+  api_proxy_hosts:
+    EU: https://apiproxy.coreview.com
+    EUS: https://usapiproxy.coreview.com
+    CAE: https://caeapiproxy.coreview.com
+    AUS: https://ausapiproxy.coreview.com
+    UKN: https://uknapiproxy.coreview.com
+    GOV: https://usgovapiproxy.coreview.com
+  coreflow_workflow_hosts:
+    EU: https://coreflowapi.coreview.com
+    EUS: https://coreflowusapi.coreview.com
+    CAE: https://coreflowcaeapi.coreview.com
+    AUS: https://coreflowausapi.coreview.com
+    GOV: https://coreflowusgovapi.coreview.com
+idempotency:
+  documented: false
+  notes: >-
+    CoreView's public API documentation does not describe an idempotency-key
+    header or idempotent-retry contract. Absence recorded honestly; no
+    Idempotency pointer emitted.
+pagination:
+  documented: false
+  notes: Pagination parameters are not described in the public API authentication docs.
+rate_limiting:
+  documented: false
+  notes: No rate-limit headers or quotas are documented in the public API docs.
+request_tracing:
+  documented: false
+error_envelope:
+  documented: false
+  notes: A structured error envelope is not published in the public API docs.
+versioning:
+  scheme: regional-host
+  notes: >-
+    Versioning is not expressed as a URL/header version; environment selection
+    is by regional proxy host and a separate GOV (FedRAMP) identity + API plane.
+cross_links:
+  authentication: authentication/coreview-fka-4ward365-authentication.yml
+  scopes: scopes/coreview-fka-4ward365-scopes.yml
+  lifecycle: lifecycle/coreview-fka-4ward365-lifecycle.yml

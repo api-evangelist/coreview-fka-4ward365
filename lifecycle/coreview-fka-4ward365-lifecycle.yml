@@ -1,0 +1,28 @@
+generated: '2026-07-18'
+method: searched
+source: https://status.coreview.com
+versioning:
+  scheme: regional-host
+  notes: >-
+    Environment is selected by regional API proxy host; there is no documented
+    URL/header API version. A separate GOV (FedRAMP) plane exists.
+deprecation:
+  policy_url: null
+  sunset_header: false
+  notes: No public deprecation/sunset policy (RFC 8594) was found in the docs.
+sla:
+  url: https://www.coreview.com/legal
+  notes: A Service Level Agreement is referenced from the CoreView legal hub.
+status_page: https://status.coreview.com
+status_page_provider: incident.io
+status_components:
+  regions:
+  - Canada
+  - East US
+  - East US Gov
+  - Europe
+  - UK
+  - Australia
+  - Simeon Cloud
+  notes: Each region reports ~5 monitored components; recent uptime 99.98-100%.
+deprecated_operations: []

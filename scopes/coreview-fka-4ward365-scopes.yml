@@ -1,0 +1,58 @@
+generated: '2026-07-18'
+method: searched
+source: https://identity.coreview.com/.well-known/openid-configuration
+docs: https://help.coreview.com/api-authentication
+schemes:
+- name: OAuth2ClientCredentials
+  source: https://help.coreview.com/api-authentication
+  flows:
+  - flow: clientCredentials
+    tokenUrl: https://identity.coreview.com/connect/token
+scopes:
+- scope: customer.read
+  description: Read access to customer/tenant configuration.
+  flows: [clientCredentials]
+- scope: customer.write
+  description: Manage customer/tenant configuration.
+  flows: [clientCredentials]
+- scope: delegation.read
+  description: Read delegated administration assignments and roles.
+  flows: [clientCredentials]
+- scope: delegation.write
+  description: Manage delegated administration assignments and roles.
+  flows: [clientCredentials]
+- scope: operator.read
+  description: Read operator (administrator) accounts and their permissions.
+  flows: [clientCredentials]
+- scope: operator.write
+  description: Manage operator (administrator) accounts and their permissions.
+  flows: [clientCredentials]
+- scope: platform.read
+  description: Read platform-level reporting and governance data.
+  flows: [clientCredentials]
+- scope: licensepool.read
+  description: Read Microsoft 365 license pool allocations.
+  flows: [clientCredentials]
+- scope: licensepool.write
+  description: Manage Microsoft 365 license pool allocations.
+  flows: [clientCredentials]
+- scope: license.read
+  description: Read Microsoft 365 license assignments and inventory.
+  flows: [clientCredentials]
+- scope: openid
+  description: Standard OpenID Connect scope requesting an ID token.
+  flows: [clientCredentials]
+- scope: profile
+  description: Standard OpenID Connect profile claims.
+  flows: [clientCredentials]
+- scope: email
+  description: Standard OpenID Connect email claim.
+  flows: [clientCredentials]
+- scope: offline_access
+  description: Request a refresh token for long-lived access.
+  flows: [clientCredentials]
+notes: >-
+  Scope names are taken verbatim from the CoreView OIDC discovery document
+  (scopes_supported) and the API authentication documentation. Descriptions are
+  derived from the scope naming (resource.read / resource.write) and CoreView's
+  documented delegation, operator, platform, and license-management domains.

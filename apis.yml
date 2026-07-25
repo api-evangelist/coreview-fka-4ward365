@@ -1,8 +1,16 @@
 aid: coreview-fka-4ward365
 name: CoreView (FKA 4ward365)
-description: CoreView (FKA 4ward365) is a company surfaced as a portfolio company of insight-partners
-  and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the
-  enrichment pipeline.
+description: >-
+  CoreView (formerly 4ward365) is an enterprise Microsoft 365 governance,
+  security, and automation platform. It secures the configuration, identity,
+  and access layers of Microsoft 365 tenants and provides delegated
+  administration, license management, reporting, and workflow automation.
+  CoreView exposes a Public API secured with OAuth 2.0 / OpenID Connect
+  (client-credentials flow) through a regional API proxy, plus a CoreFlow
+  Workflow API for triggering and monitoring automation runs. Datacenters are
+  available across the EU, East US, Canada, UK, Australia, and US Government
+  (FedRAMP) regions. This profile was surfaced as a portfolio company of
+  Insight Partners and enriched from CoreView's public developer documentation.
 url: https://raw.githubusercontent.com/api-evangelist/coreview-fka-4ward365/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,17 +18,115 @@ x-backed-by:
 - insight-partners
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
+image: https://logo.clearbit.com/coreview.com
 tags:
 - Company
-apis: []
+- Microsoft 365
+- SaaS Management
+- Governance
+- Security
+- Identity
+- Automation
+- Workflow
+- License Management
+- IT Operations
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+apis:
+- name: CoreView Public API
+  description: >-
+    The CoreView Public API provides programmatic access to Microsoft 365
+    governance operations — delegated administration, operators, platform
+    reporting, license pools, and customer/tenant management — via a regional
+    API proxy. It is secured with OAuth 2.0 / OpenID Connect using the
+    client-credentials grant against the CoreView IdentityServer, with
+    fine-grained scopes (delegation, operator, platform, licensepool, license,
+    customer). A companion CoreFlow Workflow API triggers and monitors
+    automation runs.
+  humanURL: https://help.coreview.com/api-authentication
+  baseURL: https://apiproxy.coreview.com
+  tags:
+  - Microsoft 365
+  - Governance
+  - Automation
+  - Workflow
+  - License Management
+  properties:
+  - type: Authentication
+    url: authentication/coreview-fka-4ward365-authentication.yml
+  - type: OAuthScopes
+    url: scopes/coreview-fka-4ward365-scopes.yml
+  - type: Conventions
+    url: conventions/coreview-fka-4ward365-conventions.yml
+  - type: MCPServer
+    url: mcp/coreview-fka-4ward365-mcp.yml
 common:
 - type: Website
   url: https://www.coreview.com/
+- type: DeveloperPortal
+  url: https://help.coreview.com/en_US/how-tos-APIs
+- type: Documentation
+  url: https://help.coreview.com/en_US/how-tos-APIs
+- type: APIReference
+  url: https://help.coreview.com/api-authentication
+- type: GettingStarted
+  url: https://help.coreview.com/api-authentication
+- type: Support
+  url: https://help.coreview.com/
+- type: Blog
+  url: https://www.coreview.com/blog
+- type: Pricing
+  url: https://www.coreview.com/pricing
+- type: TermsOfService
+  url: https://www.coreview.com/terms-of-service
+- type: PrivacyPolicy
+  url: https://www.coreview.com/privacy-policy
+- type: StatusPage
+  url: https://status.coreview.com
+- type: Authentication
+  url: authentication/coreview-fka-4ward365-authentication.yml
+- type: OAuthScopes
+  url: scopes/coreview-fka-4ward365-scopes.yml
+- type: OpenIDConnect
+  url: https://identity.coreview.com/.well-known/openid-configuration
+- type: WellKnown
+  url: well-known/coreview-fka-4ward365-well-known.yml
+- type: Conventions
+  url: conventions/coreview-fka-4ward365-conventions.yml
+- type: Conformance
+  url: conformance/coreview-fka-4ward365-conformance.yml
+- type: Compliance
+  url: security/coreview-fka-4ward365-trust-center.yml
+- type: TrustCenter
+  url: security/coreview-fka-4ward365-trust-center.yml
+- type: DomainSecurity
+  url: security/coreview-fka-4ward365-domain-security.yml
+- type: Lifecycle
+  url: lifecycle/coreview-fka-4ward365-lifecycle.yml
+- type: MCPServer
+  url: mcp/coreview-fka-4ward365-mcp.yml
+- type: LLMsTxt
+  url: llms/coreview-fka-4ward365-llms.txt
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

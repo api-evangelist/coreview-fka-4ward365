@@ -1,0 +1,22 @@
+generated: '2026-07-18'
+method: searched
+source: live probes of CoreView identity + API/website hosts
+hosts:
+- host: https://identity.coreview.com
+  documents:
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: coreview-fka-4ward365-openid-configuration.json
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/security.txt
+    status: 404
+- host: https://www.coreview.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+notes: >-
+  CoreView runs an OpenID Connect / IdentityServer identity provider at
+  identity.coreview.com (GOV: usidentity.coreview.com) that publishes a full
+  OIDC discovery document. No security.txt (RFC 9116) was found on the identity
+  or marketing hosts.
