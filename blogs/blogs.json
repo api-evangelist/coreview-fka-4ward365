@@ -2,6 +2,13 @@
   "repo": "coreview-fka-4ward365",
   "feeds": [
     {
+      "source": "https://coreview.helpjuice.com/questions.atom",
+      "feed_url": "https://coreview.helpjuice.com/questions.atom",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
       "source": "https://help.coreview.com/",
       "feed_url": "https://coreview.helpjuice.com/questions.atom",
       "title": "",
@@ -9,6 +16,6 @@
       "method": "discovered"
     }
   ],
-  "post_count": 0,
-  "fetched": "2026-07-20T13:31:34Z"
+  "post_count": 58,
+  "fetched": "2026-08-01T15:49:00Z"
 }
