@@ -6,26 +6,29 @@ server:
   name: coreview
   transport: http
   url: null
-notes: >-
-  No official CoreView-hosted MCP server was found. This is a CANDIDATE tool
-  list derived from CoreView's documented CoreFlow Workflow API operations
-  (help.coreview.com) — not a published server. CoreView publishes no OpenAPI,
-  so tools map to documented HTTP operations rather than operationIds. Auth is
-  OAuth 2.0 client-credentials (Bearer JWT) plus the X-scompany-ID header;
-  the regional CoreFlow host must be selected per tenant.
+notes: No official CoreView-hosted MCP server was found. This is a CANDIDATE tool list derived from CoreView's
+  documented CoreFlow Workflow API operations (help.coreview.com) — not a published server. CoreView publishes
+  no OpenAPI, so tools map to documented HTTP operations rather than operationIds. Auth is OAuth 2.0 client-credentials
+  (Bearer JWT) plus the X-scompany-ID header; the regional CoreFlow host must be selected per tenant.
 tools:
 - name: list_workflows
   description: List the automation workflows available in the CoreView tenant.
-  source_operation: 'GET {coreflow_host}/workflows'
+  source_operation: GET {coreflow_host}/workflows
 - name: get_workflow
   description: Retrieve details for a specific workflow.
-  source_operation: 'GET {coreflow_host}/workflows/{workflowId}'
+  source_operation: GET {coreflow_host}/workflows/{workflowId}
 - name: run_workflow
   description: Start a manual execution of a workflow with input variables.
-  source_operation: 'POST {coreflow_host}/workflows/{workflowId}/manual-execution'
+  source_operation: POST {coreflow_host}/workflows/{workflowId}/manual-execution
 - name: list_workflow_executions
   description: Query running/queued workflow executions with filters.
-  source_operation: 'GET {coreflow_host}/workflows/executions'
+  source_operation: GET {coreflow_host}/workflows/executions
 - name: get_workflow_execution_history
   description: Retrieve detailed execution results/history for a workflow run.
-  source_operation: 'GET {coreflow_host}/workflows/executions/history'
+  source_operation: GET {coreflow_host}/workflows/executions/history
+deployment:
+  mode: none
+  verified: derived
+  tools: 5
+  checked: '2026-08-12'
+  source: catalog MCP census
