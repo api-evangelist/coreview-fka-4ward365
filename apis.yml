@@ -36,6 +36,17 @@ modified: '2026-07-18'
 image: https://logo.clearbit.com/coreview.com
 tags:
 - Company
+- Microsoft-365
+- SaaS Management
+- Governance
+- Security
+- Identity
+- Automation
+- Workflows
+- License Management
+- IT Operations
+tags_raw:
+- Company
 - Microsoft 365
 - SaaS Management
 - Governance
@@ -64,6 +75,12 @@ apis:
   humanURL: https://help.coreview.com/api-authentication
   baseURL: https://apiproxy.coreview.com
   tags:
+  - Microsoft-365
+  - Governance
+  - Automation
+  - Workflows
+  - License Management
+  tags_raw:
   - Microsoft 365
   - Governance
   - Automation
