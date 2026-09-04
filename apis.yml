@@ -104,8 +104,9 @@ apis:
     url: scopes/coreview-fka-4ward365-scopes.yml
   - type: Conventions
     url: conventions/coreview-fka-4ward365-conventions.yml
-  - type: MCPServer
+  - type: X-MCPServerCandidate
     url: mcp/coreview-fka-4ward365-mcp.yml
+    note: 'Renamed from MCPServer 2026-09-03 (roadmap#247): the manifest self-describes as status: candidate — a tool list derived from the published API contracts, not an existing server. The scorer already read the manifest and reported mcp_server correctly; the MCPServer type was crediting the artifact-type surfaces with a server that does not exist.'
 common:
 - type: Website
   url: https://www.coreview.com/
@@ -149,8 +150,9 @@ common:
   url: security/coreview-fka-4ward365-domain-security.yml
 - type: Lifecycle
   url: lifecycle/coreview-fka-4ward365-lifecycle.yml
-- type: MCPServer
+- type: X-MCPServerCandidate
   url: mcp/coreview-fka-4ward365-mcp.yml
+  note: 'Renamed from MCPServer 2026-09-03 (roadmap#247): the manifest self-describes as status: candidate — a tool list derived from the published API contracts, not an existing server. The scorer already read the manifest and reported mcp_server correctly; the MCPServer type was crediting the artifact-type surfaces with a server that does not exist.'
 - type: LLMsTxt
   url: llms/coreview-fka-4ward365-llms.txt
 x-enrichment:
