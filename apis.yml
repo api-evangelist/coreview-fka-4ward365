@@ -47,7 +47,7 @@ modified: '2026-07-18'
 image: https://logo.clearbit.com/coreview.com
 tags:
 - Company
-- Microsoft-365
+- Microsoft 365
 - SaaS Management
 - Governance
 - Security
@@ -67,6 +67,7 @@ tags_raw:
 - Workflow
 - License Management
 - IT Operations
+- Microsoft-365
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -86,7 +87,7 @@ apis:
   humanURL: https://help.coreview.com/api-authentication
   baseURL: https://apiproxy.coreview.com
   tags:
-  - Microsoft-365
+  - Microsoft 365
   - Governance
   - Automation
   - Workflows
@@ -97,6 +98,7 @@ apis:
   - Automation
   - Workflow
   - License Management
+  - Microsoft-365
   properties:
   - type: Authentication
     url: authentication/coreview-fka-4ward365-authentication.yml
