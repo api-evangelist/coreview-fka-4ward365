@@ -64,6 +64,106 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-CoreView (FKA 4ward365) is a company surfaced as a portfolio company of insight-partners and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+CoreView (formerly 4ward365) is an enterprise Microsoft 365 governance, security, and automation platform. It secures the configuration, identity, and access layers of Microsoft 365 tenants and provides delegated administration, license management, reporting, and workflow automation. CoreView exposes a Public API secured with OAuth 2.0 / OpenID Connect (client-credentials flow) through a regional API proxy, plus a CoreFlow Workflow API for triggering and monitoring automation runs. Datacenters are available across the EU, East US, Canada, UK, Australia, and US Government (FedRAMP) regions. This profile was surfaced as a portfolio company of Insight Partners and enriched from CoreView's public developer documentation.
 
-Backed by: insight-partners — https://www.coreview.com/
+**Areas:** Company · Microsoft 365 · SaaS Management · Governance · Security · Identity · Automation · Workflows · License Management · IT Operations
+
+## CoreView (FKA 4ward365) on APIs.io
+
+Everything profiled for CoreView (FKA 4ward365) is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/coreview-fka-4ward365/](https://apis.io/providers/coreview-fka-4ward365/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [CoreView Public API](https://apis.io/apis/coreview-fka-4ward365/coreview-public-api/) — The CoreView Public API provides programmatic access to Microsoft 365 governance operations — delegated administration, operators, platform reporting,…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [coreview](https://apis.io/servers/coreview-fka-4ward365/coreview/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Coreview Fka 4Ward365 Authentication](https://apis.io/security/coreview-fka-4ward365/coreview-fka-4ward365-authentication/)
+- [Coreview Fka 4Ward365 Domain Security](https://apis.io/security/coreview-fka-4ward365/coreview-fka-4ward365-domain-security/)
+- [Coreview Fka 4Ward365 Trust Center](https://apis.io/security/coreview-fka-4ward365/coreview-fka-4ward365-trust-center/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Coreview Fka 4Ward365 Scopes](https://apis.io/scopes/coreview-fka-4ward365/coreview-fka-4ward365-scopes/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.coreview.com/)
+- [Documentation](https://help.coreview.com/en_US/how-tos-APIs)
+- [Getting started](https://help.coreview.com/api-authentication)
+- [API reference](https://help.coreview.com/api-authentication)
+- [Pricing](https://www.coreview.com/pricing)
+- [Support](https://help.coreview.com/)
+- [Blog](https://www.coreview.com/blog)
+- [Terms of service](https://www.coreview.com/terms-of-service)
+- [Privacy policy](https://www.coreview.com/privacy-policy)
+- [Status](https://status.coreview.com)
+
+## API Evangelist rating
+
+**Kin Score 36.1** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 15.8 |
+| Developer ergonomics | 57.1 |
+| Access clarity | 47.4 |
+
+**Agent readiness 10.8** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 39.2** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/coreview-fka-4ward365/](https://apis.io/providers/coreview-fka-4ward365/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for CoreView (FKA 4ward365): the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/coreview-fka-4ward365/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
